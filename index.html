@@ -1,72 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmer's Aesthetic Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body background="https://images3.alphacoders.com/134/1347726.png">
-    <header>
-        <h1>KRUSHI KRAM</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-         
-                <li><a href="contact_us.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <h2>One Farmer at a time.</h2>
-        <p>Krushis sell / buy / learn & grow with us.</p>
-    </section>
+<body>
 
-    <section class="content">
-        <h3>About Krushi Kram</h3>
-        <p>Sectors like healthcare, finance, and entertainment have embraced their revolution with rise of AI, but agriculture, the bedrock of human civilization, seems to be lagging behind. Farmers, the unsung heroes of our food supply, continue to grapple with age-old challenges such as unpredictable weather, pests, and low incomes.</p>
-    </section>
+<header>
+    <h1>KRUSHI KRAM</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="btn">Home</a></li>
+            <li><a href="about.html" class="btn">About</a></li>
+            <li><a href="contact_us.html" class="btn">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <section class="products">
-     
-        <div class="product-grid">
-            <div class="product-item">
-                <h4><a href="ecom.html">Farmer's E-Commerce</a></h4>
-                <p>Direct Farm to consumer, no middle man. High Profit margins for farmers.</p>
-            </div>
-            <div class="product-item">
-                <h4><a href="WEATHER_UPDATE.HTML">Weather Cast</a></h4>
-                <p>Live updates on weather, past/present or future.</p>
-            </div>
-            <div class="product-item">
-                <h4><a href="krushi_yojna.html">Krushi-Yojna</a></h4>
-                <p>Yearly updates on agricultural schemes for farmers by indian govt.</p>
-            </div>
-            <div class="product-item">
-                <h4><a href="market_insights.html">Market Insights</a></h4>
-                <p>All the updates will be availabale here !!!.</p>
-            </div>
-            <div class="product-item">
-                <h4><a href="community_support.html">Community Support</a></h4>
-                <p>Stronger community of Krushi's will eventually help in building a stronger nation.</p>
-            </div>
-            <div class="product-item">
-                <h4><a href="Krushi_bot.html">Krushi's AI bot</a></h4>
-                <p>Krushi's AI chat bot communicates with you and helps you solve your problems.</p>
-            </div>
-             <div class="product-item">
-                <h4><a href="krushi_khoj.html">Krushi Khoj</a></h4>
-                <p>Krushi's AI chat bot communicates with you and helps you solve your problems.</p>
-            </div>
-           
+<!-- Hero Section: Replace background image with video -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Empowering Farmers, Empowering Futures.</h2>
+        <p>Join the Krushi Kram revolution - where farmers learn, grow, and thrive.</p>
+    </div>
+    <video autoplay loop muted class="hero-video">
+        <source src="intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<!-- Feature Sections with clickable video -->
+<section class="feature" id="ecommerce">
+    <a href="ecommerce.html">
+        <div class="feature-content">
+            <h3>Farmer's E-Commerce</h3>
+            <p>Buy and sell directly with no middlemen, maximizing profit.</p>
         </div>
-    </section>
+        <video class="feature-video" autoplay loop muted>
+            <source src="intro.mp4" type="video/mp4">
+        </video>
+    </a>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Krushi Kram. All rights reserved.</p>
-    </footer>
+<section class="feature" id="weather">
+    <a href="weather.html">
+        <div class="feature-content">
+            <h3>Weather Cast</h3>
+            <p>Stay updated with real-time weather forecasts and alerts.</p>
+        </div>
+        <video class="feature-video" autoplay loop muted>
+            <source src="intro.mp4" type="video/mp4">
+        </video>
+    </a>
+</section>
+
+<section class="feature" id="yojna">
+    <a href="yojna.html">
+        <div class="feature-content">
+            <h3>Krushi Yojna</h3>
+            <p>Yearly updates on government schemes designed for farmers.</p>
+        </div>
+        <video class="feature-video" autoplay loop muted>
+            <source src="intro.mp4" type="video/mp4">
+        </video>
+    </a>
+</section>
+
+<section class="feature" id="market">
+    <a href="market.html">
+        <div class="feature-content">
+            <h3>Market Insights</h3>
+            <p>Gain insights into market trends for better decision-making.</p>
+        </div>
+        <video class="feature-video" autoplay loop muted>
+            <source src="intro.mp4" type="video/mp4">
+        </video>
+    </a>
+</section>
+
+<section class="feature" id="krushi-ai">
+    <a href="krushi-ai.html">
+        <div class="feature-content">
+            <h3>Krushi AI Chatbot</h3>
+            <p>AI-driven chatbot providing personalized assistance for farmers.</p>
+        </div>
+        <video class="feature-video" autoplay loop muted>
+            <source src="intro.mp4" type="video/mp4">
+        </video>
+    </a>
+</section>
+
+<footer>
+    <p>&copy; 2024 Krushi Kram. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
-</html>
 
+</html>

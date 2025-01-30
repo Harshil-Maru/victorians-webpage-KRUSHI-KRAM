@@ -1,39 +1,38 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1b1b1b;
-    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f1e1;
+    color: #4e4d47;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
-a {
-    color: #f4a261;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Header */
+/* Header Styles */
 header {
-
     padding: 20px;
     text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: transparent; /* Makes the header transparent */
 }
 
 header h1 {
+    font-family: 'Zilla Slab', serif;
+    font-size: 2.5rem;
     margin: 0;
-    color: #5A9F68;
-    font-size: xx-large;
+    color: #fff;
 }
 
+/* Button Menu Styles */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -44,83 +43,117 @@ nav ul li {
 }
 
 nav ul li a {
-    font-weight: bold;
-    color: #e0e0e0;
+    font-weight: 600;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #fff; /* Border color for buttons */
+    background-color: transparent;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #47a474; /* Green background on hover */
+    color: white;
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('farm-background.jpg'); /* Replace with your own image */
-    background-size: cover;
-    background-position: center;
-    padding: 100px 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: #e0e0e0;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-/* Content Section */
-.content {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.content h3 {
-    color: #5A9F68;
-}
-
-.content p {
-    color: #cccccc;
-}
-
-/* Products Section */
-.products {
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.products h3 {
-    color: #5A9F68;
-    text-align: center;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.product-item {
-   
-    text-align: center;
-}
-
-.product-item h4 {
-    color: #5A9F68;
-    margin: 0 0 10px 0;
-}
-
-.product-item p {
-    color: #cccccc;
-}
-
-/* Footer */
-footer {
- 
-    text-align: center;
-    padding: 20px;
-    color: #e0e0e0;
     position: relative;
-    bottom: 0;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    font-family: 'Zilla Slab', serif;
+    color: #fff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Feature Sections */
+.feature {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    cursor: pointer; /* Makes the section clickable */
+}
+
+.feature a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    text-decoration: none; /* Remove link underlining */
+}
+
+.feature-content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: white;
+}
+
+.feature h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.feature p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.feature-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+
+/* Video effect when hovered */
+.feature:hover .feature-video {
+    transform: scale(1.1); /* Zoom the video */
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInSection {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Scroll Animation */
+.feature.in-view .feature-video {
+    opacity: 1;
 }
